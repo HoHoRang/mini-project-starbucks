@@ -29,24 +29,19 @@ http://locahost:3000
 ## 3. 기술 스택
 
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black"/>
-
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=black"/>
-
 <img src="https://img.shields.io/badge/Nodemon-76D04B?style=flat&logo=Nodemon&logoColor=black"/>
-
 <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=MongoDB&logoColor=black"/>
 
 <img src="https://img.shields.io/badge/Puppeteer-40B5A4?style=flat&logo=Puppeteer&logoColor=black"/>
-
 <img src="https://img.shields.io/badge/Cheerio-40B5A4?style=flat&logo=Puppeteer&logoColor=black"/>
-
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoColor=black"/>
-
 <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/>
 
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=Swagger&logoColor=black"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white"/>
 
 ## 4. ERD 설계
 
