@@ -8,10 +8,6 @@
 
 <br>
 
-## Starbucks
-
-<br>
-
 ## 1. 프로젝트 설명
 
 스타벅스 회원가입, 로그인 기능 및 메뉴 스크롤링
@@ -43,14 +39,134 @@ http://locahost:3000
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white"/>
 
+<br>
+
 ## 4. ERD 설계
 
-## 5. 파이프라인
+```
+// Starbucks
+const starbucksSchema = new mongoose.Schema({
+  name: String,
+  img: String,
+});
 
-## 6. API 설계
+// Token
+const tokenSchema = new mongoose.Schema({
+  token: String,
+  phone: String,
+  isAuth: Boolean,
+});
 
-## 7. 프로젝트 설치 방법
+// OG
+const ogSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  image: String,
+});
 
-## 8. 폴더 구조
+// User
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  personal: String,
+  prefer: String,
+  pwd: String,
+  phone: String,
+  og: ogSchema,
+});
+```
 
-## 9. .env
+<br>
+
+## 5. 프로젝트 설치 방법
+
+`./backend/`에서
+
+```
+yarn install # 모듈 설치
+
+docker-compose build # 백엔드 서버 및 MongoDB 빌드
+
+docker-compose up # 백엔드 및 MongoDB 실행
+```
+
+`./webcrawler`에서
+
+```
+yarn install # 모듈 설치
+
+node index.js # 크롤링 실행
+```
+
+<br>
+
+## 6. 폴더 구조
+
+```
+.
+├── README.md
+├── backend
+│   ├── Dockerfile
+│   ├── docker-compose.yaml
+│   ├── email.js
+│   ├── index.js
+│   ├── models
+│   │   ├── starbucks.model.js
+│   │   ├── token.model.js
+│   │   └── user.model.js
+│   ├── package.json
+│   ├── phone.js
+│   ├── swagger
+│   │   ├── config.js
+│   │   ├── starbucks.swagger.js
+│   │   ├── token.swagger.js
+│   │   └── users.swagger.js
+│   ├── utils.js
+│   └── yarn.lock
+├── diagram.drawio
+├── frontend
+│   ├── img
+│   │   ├── back-ground.jpg
+│   │   ├── facebook.png
+│   │   ├── google.png
+│   │   ├── kakao.png
+│   │   ├── menu-back-ground.jpg
+│   │   ├── naver.png
+│   │   ├── starbucks.png
+│   │   └── user-back-ground.jpg
+│   ├── login
+│   │   ├── index.css
+│   │   ├── index.html
+│   │   ├── index.js
+│   │   └── signup.js
+│   ├── menu
+│   │   ├── index.css
+│   │   ├── index.html
+│   │   ├── index.js
+│   │   └── menu.js
+│   └── user
+│       ├── index.css
+│       ├── index.html
+│       ├── index.js
+│       └── user.js
+└── webcrawler
+    ├── index.js
+    ├── models
+    │   └── starbucks.model.js
+    ├── package.json
+    └── yarn.lock
+```
+
+<br>
+
+## 7. .env
+
+```
+SMS_APP_KEY=
+SMS_X_SECRET_KEY=
+SMS_SENDER=
+
+MAIL_APP_KEY=
+MAIL_X_SECRET_KEY=
+MAIL_SENDER=
+```
